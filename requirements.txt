@@ -1,0 +1,13 @@
+apify_client
+selenium
+nltk
+gensim
+plotly
+spacy
+transformers
+torch
+#python -m spacy download en_core_web_sm
+nlp
+fuzzywuzzy
+python-Levenshtein
+#python -m spacy download en_core_web_md

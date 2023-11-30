@@ -1,0 +1,61 @@
+data sources/extraction 
+## scrape from indeed (jobs), udemy(courses) and mcservices(skills) 
+## manually tags and filter skills
+
+
+data exploration
+## Load Jobs and courses dataset which was scraped
+## Clean the datasets
+## format the datasets for proper column formatting 
+## Lemmatizer and stopwords removal 
+## Hierarchical clustering on job titles
+## sequence mining, transition matrix and sankey digrams
+## spacy model (en_core_web_sm) (phraser model) and get most common keywords in course description
+## spacy model (en_core_web_sm) (phraser model) and get most common keywords in job description
+## cosine similarity between job/course description against skills using tfidf vectorizer -- tried
+## cosine similarity between job/course description against skills using bert embeddings -- worked
+
+
+
+data processing (mining) (cleaning and formatting,lemmatizing, phrase matched, job progression, fuzzy match titles)
+## import modules
+## Load the datasets which are scraped
+## Lemmatizer stopword removal modules 
+## clean skills dataset 
+## filter the data for validation
+## clean jobs dataset 
+## phrase matcher model to extract skills from job description 
+## used prebuilt nlp spacy model to train to predict/extract skills from description (explored not used)
+## create job titles using job progression dictionary and declare set of properly defined titles  
+## clean job titles by fuzzy matching, regular expression and normalizing against job preogression titles
+## clean course data 
+## Lemmitization and cleaning columns
+## merge all course description into one
+## phrase matcher model to extract skills from course description 
+## save processed datasets
+
+data genration (synthetic data job transtion)
+## use the processed job, courses and job_progression dictionary to create transitions 
+## explain the algorithm on how next job is selected using job progression dictionary 
+## explain the algorithm on how you are selecting next course (by tfidf vectorizer of course description against skills)
+## explain how top 10 courses are selected for the next job 
+## show how synthetic data looks [Sample few rows]
+
+##modelling
+## load the synthetic data
+## split the data into test and validation 
+## convert text data to embeddings 
+## tried LSTM model to use feature embeddings and predict target embeddings (explored and tried)
+## built Seq2seq transoformer model with encoder, decoder and decoder sequence for jobs
+## built Seq2seq transoformer model with encoder, decoder and decoder sequence for skills prediction 
+## predicted courses to take using skills predicted against course description (tfidf)
+
+##evaluation
+## accuracy (predicted sequence vs orginal sequence)
+## blue score (not added) 
+
+##prediciton
+## take the input from the user on current job and what jobs he wants to go to next 
+## predict the jobs in sequence until he finds that job
+## predict the next skills he should learn 
+## extract courses by tfidfing skills against course description

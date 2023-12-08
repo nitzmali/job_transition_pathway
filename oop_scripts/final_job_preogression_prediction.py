@@ -30,7 +30,7 @@ from tensorflow.keras.layers import Layer
 import tensorflow.keras.backend as K
 
 
-# In[4]:
+# In[2]:
 
 
 from tensorflow.keras.models import Model, load_model
@@ -232,6 +232,7 @@ def predict_skills(df_user):
     return next_skills
 
 
+
 # In[23]:
 
 
@@ -354,17 +355,24 @@ def main():
     
     # Concatenate with the original DataFrame
     predictions_df = pd.concat([predictions_df, courses_df], axis=1)
+    print(predictions_df)
     return predictions_df
 
 
 
-# In[29]:
+# In[31]:
 
 
 # Call the main function
 if __name__ == "__main__":
     predictions_df = main()
-    print(predictions_df)
+
+
+# In[34]:
+
+
+predictions_df
+
 
 # In[ ]:
 

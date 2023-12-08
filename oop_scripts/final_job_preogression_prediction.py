@@ -125,7 +125,7 @@ def predict_job(df_user):
     X_user_tensor = tf.convert_to_tensor(user_embedding, dtype=tf.float32)
     next_job = loadjobModels_cl.decode_sequence_job(X_user_tensor[0:1])
     return  next_job.replace("start ","").lstrip().rstrip()
-predict_job(df_user)
+
 
 
 # In[9]:
@@ -230,7 +230,6 @@ def predict_skills(df_user):
     next_skills = loadskillsModels_cl.decode_sequence_skills(X_user_tensor[0:1]).strip().lstrip().rstrip()
     next_skills = next_skills.replace("start ","").replace("end ","").strip().lstrip().rstrip()
     return next_skills
-predict_skills(df_user)
 
 
 # In[23]:
